@@ -50,8 +50,100 @@ namespace Agosto20
       listaLibros.Add(libro1);
       listaLibros.Add(libro2);
 
+      // tipos de variables
+      // primitivas
+      int primitiva=20;
+      // objetos
+      Libro objeto=new Libro();
+      // arreglos (finitos)
+      // listas hash, stack, queue
+      List<string> paises=new List<string>();
+      paises.Add("Chile");
+      paises.Add("Argentina");
+      paises.Add("Peru");
+
+      int contador=0;
+
+      //contador=contador+1;
+      //contador++;
+      //contador+=1;
 
 
+      // loop
+      // 1) for
+
+      for(int i=0;i<3;i++)
+      {
+        Debug.WriteLine(paises[i]);
+      }
+
+      for (int i = 2; i >= 0; i--)
+      {
+        Debug.WriteLine(paises[i]);
+      }
+
+      // de dos en dos
+      for (int i = 0; i < 3; i+=2)
+      {
+        Debug.WriteLine(paises[i]);
+      }
+
+
+      // ciclo anidado
+      for(int i=0;i<10;i++)
+      {
+        for(int e=0;e<10;e++)
+        {
+          Debug.WriteLine(i+" "+e);
+        }
+      }
+
+      // 2) ciclo while
+      // quiero usar el while cuando no
+      // se cuando debo terminar el loop.
+      // Por ejemplo: si voy a leer un texto linea
+      // a linea.
+      int cont=0;
+
+      while(cont<10)
+      {
+        Debug.WriteLine("ciclo while");
+        cont=cont+1;
+      }
+
+      do
+      {
+        Debug.WriteLine("ciclo while");
+        cont = cont + 1;
+
+      } while (cont < 10);
+
+      // 3) foreach
+      // necesitamos una lista o arreglo.
+
+      foreach(string pais in paises)
+      {
+        Debug.WriteLine(pais);
+      }
+
+      List<int> precios=new List<int>();
+      precios.Add(1);
+      precios.Add(2);
+      precios.Add(10);
+
+      // obtener el promedio.
+      int total=0;
+      foreach(int precio in precios)
+      {
+        total=total+precio;
+      }
+      int promedio=total/ precios.Count;
+      Debug.WriteLine(promedio);
+
+      // alias => alias
+
+      double promedio2=precios.Average(p => p);
+      total=precios.Sum(p => p);
 
 
     }
